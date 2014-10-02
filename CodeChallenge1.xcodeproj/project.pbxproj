@@ -14,6 +14,7 @@
 		F418811619DDD7BA00E9B464 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F418811519DDD7BA00E9B464 /* Images.xcassets */; };
 		F418811919DDD7BA00E9B464 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F418811719DDD7BA00E9B464 /* LaunchScreen.xib */; };
 		F418812519DDD7BA00E9B464 /* CodeChallenge1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = F418812419DDD7BA00E9B464 /* CodeChallenge1Tests.m */; };
+		F43C340519DDE0930086D207 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F43C340419DDE0930086D207 /* HomePageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		F418811E19DDD7BA00E9B464 /* CodeChallenge1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeChallenge1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F418812319DDD7BA00E9B464 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F418812419DDD7BA00E9B464 /* CodeChallenge1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodeChallenge1Tests.m; sourceTree = "<group>"; };
+		F43C340319DDE0930086D207 /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = "<group>"; };
+		F43C340419DDE0930086D207 /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 				F418810F19DDD7BA00E9B464 /* ViewController.h */,
 				F418811019DDD7BA00E9B464 /* ViewController.m */,
 				F418811219DDD7BA00E9B464 /* Main.storyboard */,
+				F43C340319DDE0930086D207 /* HomePageViewController.h */,
+				F43C340419DDE0930086D207 /* HomePageViewController.m */,
 				F418811519DDD7BA00E9B464 /* Images.xcassets */,
 				F418811719DDD7BA00E9B464 /* LaunchScreen.xib */,
 				F418810819DDD7BA00E9B464 /* Supporting Files */,
@@ -219,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F43C340519DDE0930086D207 /* HomePageViewController.m in Sources */,
 				F418811119DDD7BA00E9B464 /* ViewController.m in Sources */,
 				F418810E19DDD7BA00E9B464 /* AppDelegate.m in Sources */,
 				F418810B19DDD7BA00E9B464 /* main.m in Sources */,
@@ -412,6 +418,7 @@
 				F418812A19DDD7BA00E9B464 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F418812B19DDD7BA00E9B464 /* Build configuration list for PBXNativeTarget "CodeChallenge1Tests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +427,7 @@
 				F418812D19DDD7BA00E9B464 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
