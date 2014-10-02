@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="enC-bP-oyl">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Answer-->
@@ -16,31 +17,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="He3-Bh-HcJ">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="112" width="97" height="30"/>
-                                </variation>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jng-d5-C5Q">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="221" y="112" width="97" height="30"/>
-                                </variation>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oHQ-oI-ZZK">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="22" id="lCH-A9-oZu"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="153" y="116" width="11" height="21"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="lCH-A9-oZu"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="lCH-A9-oZu"/>
+                                    </mask>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkf-GO-qfp">
@@ -48,29 +47,71 @@
                                 <state key="normal" title="Calculate">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="135" y="218" width="65" height="30"/>
-                                </variation>
                                 <connections>
                                     <action selector="onCalculateButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="KPE-RE-2v8"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="He3-Bh-HcJ">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jng-d5-C5Q" firstAttribute="leading" secondItem="oHQ-oI-ZZK" secondAttribute="trailing" constant="53" id="0gv-T5-pUv"/>
+                            <constraint firstItem="He3-Bh-HcJ" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="43" id="0uT-v0-ert"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jng-d5-C5Q" secondAttribute="trailing" constant="23" id="2zn-8M-0As"/>
+                            <constraint firstItem="He3-Bh-HcJ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="16" id="8aO-15-2DD"/>
+                            <constraint firstItem="oHQ-oI-ZZK" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="Dkh-oR-KyC"/>
+                            <constraint firstItem="fkf-GO-qfp" firstAttribute="top" secondItem="oHQ-oI-ZZK" secondAttribute="bottom" constant="81" id="Ffn-SS-Mgl"/>
+                            <constraint firstItem="oHQ-oI-ZZK" firstAttribute="leading" secondItem="He3-Bh-HcJ" secondAttribute="trailing" constant="60" id="NDb-Ky-J35"/>
+                            <constraint firstItem="He3-Bh-HcJ" firstAttribute="bottom" secondItem="oHQ-oI-ZZK" secondAttribute="bottom" id="O2p-d4-xAI"/>
+                            <constraint firstItem="oHQ-oI-ZZK" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="52" id="WFG-KP-wb8"/>
+                            <constraint firstItem="fkf-GO-qfp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="157" id="tjZ-B8-H6T"/>
+                            <constraint firstItem="Jng-d5-C5Q" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="48" id="w54-yi-bAk"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="He3-Bh-HcJ"/>
                                 <exclude reference="Jng-d5-C5Q"/>
                                 <exclude reference="oHQ-oI-ZZK"/>
                                 <exclude reference="fkf-GO-qfp"/>
+                                <exclude reference="He3-Bh-HcJ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="0uT-v0-ert"/>
+                                <exclude reference="8aO-15-2DD"/>
+                                <exclude reference="O2p-d4-xAI"/>
+                                <exclude reference="Dkh-oR-KyC"/>
+                                <exclude reference="NDb-Ky-J35"/>
+                                <exclude reference="WFG-KP-wb8"/>
+                                <exclude reference="Ffn-SS-Mgl"/>
+                                <exclude reference="tjZ-B8-H6T"/>
+                                <exclude reference="0gv-T5-pUv"/>
+                                <exclude reference="2zn-8M-0As"/>
+                                <exclude reference="w54-yi-bAk"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="He3-Bh-HcJ"/>
                                 <include reference="Jng-d5-C5Q"/>
                                 <include reference="oHQ-oI-ZZK"/>
                                 <include reference="fkf-GO-qfp"/>
+                                <include reference="He3-Bh-HcJ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="0uT-v0-ert"/>
+                                <include reference="8aO-15-2DD"/>
+                                <include reference="O2p-d4-xAI"/>
+                                <include reference="Dkh-oR-KyC"/>
+                                <include reference="NDb-Ky-J35"/>
+                                <include reference="WFG-KP-wb8"/>
+                                <include reference="Ffn-SS-Mgl"/>
+                                <include reference="tjZ-B8-H6T"/>
+                                <include reference="0gv-T5-pUv"/>
+                                <include reference="2zn-8M-0As"/>
+                                <include reference="w54-yi-bAk"/>
                             </mask>
                         </variation>
                     </view>
@@ -90,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="787" y="201"/>
+            <point key="canvasLocation" x="786" y="201"/>
         </scene>
         <!--Home Page View Controller-->
         <scene sceneID="NJh-20-sC4">
@@ -101,6 +142,7 @@
                         <viewControllerLayoutGuide type="bottom" id="xMR-Pv-wSw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="oFT-bP-yfP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oqR-U0-eBh">
